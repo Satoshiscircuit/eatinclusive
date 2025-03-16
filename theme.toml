@@ -1,0 +1,9 @@
+name = "EatInclusive"
+license = "MIT"
+description = "A theme for the EatInclusive website"
+homepage = "https://github.com/satoshiscircuit/eatinclusive"
+min_version = "0.41.0"
+
+[author]
+  name = "EatInclusive"
+  homepage = "https://eatinclusive.com"
