@@ -1,0 +1,30 @@
+<div class="col-md-6 col-lg-4 mb-4">
+    <div class="restaurant-card">
+        <div class="restaurant-card-image">
+            <img src="/api/placeholder/400/300" alt="{{ .Title }}">
+            {{ if .Params.featured }}
+            <div class="restaurant-card-badge">Featured</div>
+            {{ else if .Params.popular }}
+            <div class="restaurant-card-badge">Popular</div>
+            {{ end }}
+        </div>
+        <div class="restaurant-card-content">
+            <div class="restaurant-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="count">({{ .Params.reviewCount | default 0 }})</span>
+            </div>
+            <h3 class="restaurant-card-title">{{ .Title }}</h3>
+            <p class="restaurant-card-location"><i class="fas fa-map-marker-alt me-1"></i> {{ .Params.neighborhood | default "Chicago" }} • {{ .Params.cuisine | default "Various" }}</p>
+            <p class="restaurant-card-description">{{ .Description | default .Summary }}</p>
+            <div class="restaurant-card-tags">
+                {{ range .Params.dietaryOptions }}
+                <span class="tag-item"><i class="fas fa-check-circle text-success me-1"></i>{{ . }}</span>
+                {{ end }}
+            </div>
+            <div class="restaurant-card-footer">
+                <a href="{{ .Permalink }}" class="btn btn-outline-primary"><i class="fas fa-info-circle me-1"></i>Details</a>
+                <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt me-1"></i>Reserve</a>
+            </div>
+        </div>
+    </div>
+</div>

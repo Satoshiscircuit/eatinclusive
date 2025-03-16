@@ -1,0 +1,40 @@
+<div class="search-card">
+    <form id="restaurant-search">
+        <div class="row g-3">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                    <select id="location" class="form-select">
+                        <option value="">All Neighborhoods</option>
+                        <option value="loop">The Loop</option>
+                        <option value="river-north">River North</option>
+                        <option value="wicker-park">Wicker Park</option>
+                        <option value="logan-square">Logan Square</option>
+                        <option value="west-loop">West Loop</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-pizza-slice"></i></span>
+                    <select id="cuisine" class="form-select">
+                        <option value="">All Cuisines</option>
+                        <option value="italian">Italian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="asian">Asian</option>
+                        <option value="american">American</option>
+                        <option value="mediterranean">Mediterranean</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dietaryModal">
+                    <i class="fas fa-filter me-2"></i>Dietary Filters
+                </button>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-lg btn-primary px-5"><i class="fas fa-search me-2"></i>Find Restaurants</button>
+        </div>
+    </form>
+</div>
