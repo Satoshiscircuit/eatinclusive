@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Inclusive - Find Restaurants for Every Dietary Need</title>
+    <meta name="description" content="Find restaurants in Chicago that accommodate gluten-free, vegan, and other dietary restrictions.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <span class="brand-icon"><i class="fas fa-utensils"></i></span>
+                    <span class="ms-2">Eat<span class="text-primary fw-bold">Inclusive</span></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/"><i class="fas fa-home me-1"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/restaurants/"><i class="fas fa-search me-1"></i> Find Restaurants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about/"><i class="fas fa-info-circle me-1"></i> About</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-primary btn-sm mt-1 mt-lg-0" href="/contact/"><i class="fas fa-envelope me-1"></i> Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <span class="badge bg-primary mb-3">Chicago's Best Food Guide</span>
+                            <h1 class="display-4 fw-bold mb-4">Find Restaurants for <span class="text-primary">Every Dietary Need</span></h1>
+                            <p class="lead mb-4">Discover the perfect Chicago restaurants that accommodate your dietary restrictions with ease. Gluten-free, vegan, vegetarian — we've got you covered.</p>
+                            <div class="hero-cta">
+                                <a href="#search-section" class="btn btn-primary btn-lg me-2"><i class="fas fa-search me-2"></i>Find Restaurants</a>
+                                <a href="/about/" class="btn btn-outline-dark btn-lg"><i class="fas fa-info-circle me-2"></i>Learn More</a>
+                            </div>
+                            <div class="featured-badges mt-5">
+                                <span class="badge rounded-pill bg-light text-dark p-2 ps-3 pe-3 me-2 mb-2"><i class="fas fa-check-circle text-success me-2"></i>Gluten-Free</span>
+                                <span class="badge rounded-pill bg-light text-dark p-2 ps-3 pe-3 me-2 mb-2"><i class="fas fa-leaf text-success me-2"></i>Vegan</span>
+                                <span class="badge rounded-pill bg-light text-dark p-2 ps-3 pe-3 me-2 mb-2"><i class="fas fa-seedling text-success me-2"></i>Vegetarian</span>
+                                <span class="badge rounded-pill bg-light text-dark p-2 ps-3 pe-3 me-2 mb-2"><i class="fas fa-ban text-danger me-2"></i>Dairy-Free</span>
+                                <span class="badge rounded-pill bg-light text-dark p-2 ps-3 pe-3 me-2 mb-2"><i class="fas fa-fish text-primary me-2"></i>Pescatarian</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="hero-image-container">
+                            <img src="/api/placeholder/600/400" class="hero-image img-fluid rounded-3 shadow" alt="Restaurant food image">
+                            <div class="hero-stats shadow">
+                                <div class="hero-stat-item">
+                                    <span class="hero-stat-number">200+</span>
+                                    <span class="hero-stat-label">Restaurants</span>
+                                </div>
+                                <div class="hero-stat-item">
+                                    <span class="hero-stat-number">15+</span>
+                                    <span class="hero-stat-label">Neighborhoods</span>
+                                </div>
+                                <div class="hero-stat-item">
+                                    <span class="hero-stat-number">10+</span>
+                                    <span class="hero-stat-label">Dietary Options</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="section-subtitle">Simple Process</span>
+                    <h2 class="section-title">How EatInclusive Works</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <h3 class="feature-title">1. Set Your Preferences</h3>
+                            <p class="feature-text">Filter restaurants by dietary needs, neighborhoods, and cuisine types to find exactly what you're looking for.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3 class="feature-title">2. Discover Restaurants</h3>
+                            <p class="feature-text">Browse verified restaurants that cater to your specific dietary requirements with detailed menu information.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="feature-title">3. Enjoy Your Meal</h3>
+                            <p class="feature-text">Dine with confidence knowing the restaurant can accommodate your dietary needs and preferences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section id="search-section" class="search-section">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="section-subtitle">Find Your Next Meal</span>
+                    <h2 class="section-title">Search Restaurants</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="search-card">
+                    <form id="restaurant-search">
+                        <div class="row g-3">
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                    <select id="location" class="form-select">
+                                        <option value="">All Neighborhoods</option>
+                                        <option value="loop">The Loop</option>
+                                        <option value="river-north">River North</option>
+                                        <option value="wicker-park">Wicker Park</option>
+                                        <option value="logan-square">Logan Square</option>
+                                        <option value="west-loop">West Loop</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-pizza-slice"></i></span>
+                                    <select id="cuisine" class="form-select">
+                                        <option value="">All Cuisines</option>
+                                        <option value="italian">Italian</option>
+                                        <option value="mexican">Mexican</option>
+                                        <option value="asian">Asian</option>
+                                        <option value="american">American</option>
+                                        <option value="mediterranean">Mediterranean</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dietaryModal">
+                                    <i class="fas fa-filter me-2"></i>Dietary Filters
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-lg btn-primary px-5"><i class="fas fa-search me-2"></i>Find Restaurants</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Restaurants -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="section-subtitle">Best in Chicago</span>
+                    <h2 class="section-title">Featured Restaurants</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div id="loading-indicator" class="text-center my-5 d-none">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Searching for restaurants...</p>
+                </div>
+                <div id="search-results" class="row g-4">
+                    <!-- Restaurant cards -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="restaurant-card">
+                            <div class="restaurant-card-image">
+                                <img src="/api/placeholder/400/300" alt="True Food Kitchen">
+                                <div class="restaurant-card-badge">Featured</div>
+                            </div>
+                            <div class="restaurant-card-content">
+                                <div class="restaurant-card-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="count">(143)</span>
+                                </div>
+                                <h3 class="restaurant-card-title">True Food Kitchen</h3>
+                                <p class="restaurant-card-location"><i class="fas fa-map-marker-alt me-1"></i> River North • American</p>
+                                <p class="restaurant-card-description">Health-focused restaurant with seasonal ingredients and customizable menu items.</p>
+                                <div class="restaurant-card-tags">
+                                    <span class="tag-item"><i class="fas fa-check-circle text-success me-1"></i>Gluten-Free</span>
+                                    <span class="tag-item"><i class="fas fa-leaf text-success me-1"></i>Vegan</span>
+                                </div>
+                                <div class="restaurant-card-footer">
+                                    <a href="#" class="btn btn-outline-primary"><i class="fas fa-info-circle me-1"></i>Details</a>
+                                    <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt me-1"></i>Reserve</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="restaurant-card">
+                            <div class="restaurant-card-image">
+                                <img src="/api/placeholder/400/300" alt="Chicago Diner">
+                                <div class="restaurant-card-badge">Popular</div>
+                            </div>
+                            <div class="restaurant-card-content">
+                                <div class="restaurant-card-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="count">(187)</span>
+                                </div>
+                                <h3 class="restaurant-card-title">Chicago Diner</h3>
+                                <p class="restaurant-card-location"><i class="fas fa-map-marker-alt me-1"></i> Logan Square • American</p>
+                                <p class="restaurant-card-description">Meat-free since 1983. Comfort food classics reimagined with plant-based ingredients.</p>
+                                <div class="restaurant-card-tags">
+                                    <span class="tag-item"><i class="fas fa-leaf text-success me-1"></i>Vegan</span>
+                                    <span class="tag-item"><i class="fas fa-seedling text-success me-1"></i>Vegetarian</span>
+                                </div>
+                                <div class="restaurant-card-footer">
+                                    <a href="#" class="btn btn-outline-primary"><i class="fas fa-info-circle me-1"></i>Details</a>
+                                    <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt me-1"></i>Reserve</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="/restaurants/" class="btn btn-outline-primary btn-lg"><i class="fas fa-utensils me-2"></i>View All Restaurants</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="section-subtitle">What People Say</span>
+                    <h2 class="section-title">Customer Testimonials</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">★★★★★</div>
+                            <p class="testimonial-text">"As someone with celiac disease, finding safe restaurants used to be so stressful. EatInclusive has been a game-changer for me in Chicago!"</p>
+                            <div class="testimonial-user">
+                                <div class="testimonial-avatar">
+                                    <img src="/api/placeholder/50/50" alt="Sarah L.">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">Sarah L.</h4>
+                                    <p class="testimonial-title">Celiac Advocate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">★★★★★</div>
+                            <p class="testimonial-text">"Finding vegan options in Chicago has never been easier. I love the detailed menu information and filter options!"</p>
+                            <div class="testimonial-user">
+                                <div class="testimonial-avatar">
+                                    <img src="/api/placeholder/50/50" alt="Marcus T.">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">Marcus T.</h4>
+                                    <p class="testimonial-title">Vegan Food Blogger</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">★★★★☆</div>
+                            <p class="testimonial-text">"I have multiple food allergies and this website has helped me discover so many new restaurants that I can safely enjoy!"</p>
+                            <div class="testimonial-user">
+                                <div class="testimonial-avatar">
+                                    <img src="/api/placeholder/50/50" alt="Elena K.">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">Elena K.</h4>
+                                    <p class="testimonial-title">Food Allergy Mom</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h2 class="newsletter-title">Stay Updated</h2>
+                            <p class="newsletter-text">Subscribe to our newsletter for the latest restaurant additions, exclusive offers, and dietary-friendly dining tips.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <form id="newsletter-form" class="newsletter-form">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email" required>
+                                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="privacy-policy" required>
+                                    <label class="form-check-label small" for="privacy-policy">
+                                        I agree to the privacy policy and terms of service
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand mb-4">
+                        <a href="/" class="d-flex align-items-center text-decoration-none">
+                            <span class="brand-icon text-white"><i class="fas fa-utensils"></i></span>
+                            <span class="ms-2 text-white">Eat<span class="text-primary fw-bold">Inclusive</span></span>
+                        </a>
+                    </div>
+                    <p class="footer-text">Helping Chicagoans with dietary restrictions find the perfect restaurant since 2022.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h4 class="footer-header">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/restaurants/">Find Restaurants</a></li>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h4 class="footer-header">Dietary Options</h4>
+                    <ul class="footer-links">
+                        <li><a href="/restaurants/?diet=gluten-free">Gluten-Free</a></li>
+                        <li><a href="/restaurants/?diet=vegan">Vegan</a></li>
+                        <li><a href="/restaurants/?diet=vegetarian">Vegetarian</a></li>
+                        <li><a href="/restaurants/?diet=dairy-free">Dairy-Free</a></li>
+                        <li><a href="/restaurants/?diet=nut-free">Nut-Free</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="footer-header">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 W Madison St, Chicago, IL</li>
+                        <li><i class="fas fa-phone"></i> (312) 555-8742</li>
+                        <li><i class="fas fa-envelope"></i> info@eatinclusive.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 EatInclusive. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dietary Filter Modal -->
+    <div class="modal fade" id="dietaryModal" tabindex="-1" aria-labelledby="dietaryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dietaryModalLabel">Dietary Filters</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="dietary-options">
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="gluten-free" value="gluten-free">
+                            <label class="form-check-label" for="gluten-free">
+                                <i class="fas fa-check-circle text-success me-2"></i>Gluten-Free
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="vegan" value="vegan">
+                            <label class="form-check-label" for="vegan">
+                                <i class="fas fa-leaf text-success me-2"></i>Vegan
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="vegetarian" value="vegetarian">
+                            <label class="form-check-label" for="vegetarian">
+                                <i class="fas fa-seedling text-success me-2"></i>Vegetarian
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="dairy-free" value="dairy-free">
+                            <label class="form-check-label" for="dairy-free">
+                                <i class="fas fa-ban text-danger me-2"></i>Dairy-Free
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="pescatarian" value="pescatarian">
+                            <label class="form-check-label" for="pescatarian">
+                                <i class="fas fa-fish text-primary me-2"></i>Pescatarian
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="keto" value="keto">
+                            <label class="form-check-label" for="keto">
+                                <i class="fas fa-bacon text-warning me-2"></i>Keto-Friendly
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="nut-free" value="nut-free">
+                            <label class="form-check-label" for="nut-free">
+                                <i class="fas fa-allergies text-danger me-2"></i>Nut-Free
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="halal" value="halal">
+                            <label class="form-check-label" for="halal">
+                                <i class="fas fa-moon text-info me-2"></i>Halal
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline dietary-check">
+                            <input class="form-check-input" type="checkbox" id="kosher" value="kosher">
+                            <label class="form-check-label" for="kosher">
+                                <i class="fas fa-star-of-david text-info me-2"></i>Kosher
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="apply-filters" data-bs-dismiss="modal">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

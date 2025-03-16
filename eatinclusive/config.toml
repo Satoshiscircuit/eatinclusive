@@ -1,0 +1,37 @@
+baseURL = "https://eatinclusive.com/"
+languageCode = "en-us"
+title = "Eat Inclusive - Find Restaurants for Every Dietary Need"
+theme = ""
+enableRobotsTXT = true
+
+[params]
+  description = "Find restaurants in Chicago that accommodate dietary restrictions and preferences"
+  author = "EatInclusive Team" 
+  mainSections = ["restaurants"]
+  cityFocus = "Chicago"
+  images = ["images/logo.svg"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  cuisine = "cuisines"
+  neighborhood = "neighborhoods"
+  dietary = "dietary_needs"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Restaurants"
+    url = "/restaurants/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
