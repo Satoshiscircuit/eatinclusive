@@ -1,7 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Eat Inclusive - Find Restaurants for Every Dietary Need"
-theme = "ananke"
 enableRobotsTXT = true
 
 [params]
